@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous Dota 2 Agents</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<h1>Autonomous Dota 2 Agents</h1>
+<form action="{{ url_for('start_match') }}" method="POST">
+<label for="num_teams">Number of Teams:</label>
+<input type="number" name="num_teams" id="num_teams">
+<br>
+<label for="match_duration">Match Duration (Minutes):</label>
+<input type="number" name="match_duration" id="match_duration">
+<br>
+<input type="submit" value="Start Match">
+</form>
+<br>
+<div id="agent_controls"></div>
+<br>
+<div id="game_results"></div>
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
+
+
